@@ -1,0 +1,22 @@
+version: 4.2.29
+session: 680776a33db58a9b61e61ae2
+steps:
+  - prompt: Click on the search input field.
+    commands:
+      - command: hover-text
+        text: Search...
+        description: search input field at the top right of the webpage
+        action: click
+  - prompt: Type "industrial sewing" into the search input field.
+    commands:
+      - command: type
+        text: industrial sewing
+  - prompt: Click the search button.
+    commands:
+      - command: hover-image
+        description: orange magnifying glass icon next to the search input
+        action: click
+  - prompt: Assert that the search results page displays relevant results.
+    commands:
+      - command: assert
+        expect: the page displays results related to industrial sewing
