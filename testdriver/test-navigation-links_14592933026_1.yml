@@ -1,0 +1,13 @@
+version: 4.2.29
+session: 6807769d5de99b7ee5b3bd6d
+steps:
+  - prompt: Click on the "Home" link in the navigation bar.
+    commands:
+      - command: hover-text
+        text: HOME
+        description: home link in the navigation bar
+        action: click
+  - prompt: Assert that the home page loads without errors.
+    commands:
+      - command: assert
+        expect: Welcome! For any assistance, feel free to chat with us.
